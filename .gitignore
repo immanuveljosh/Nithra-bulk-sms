@@ -1,0 +1,26 @@
+# Node dependencies
+node_modules/
+npm-debug.log*
+
+# Android build outputs & Gradle cache
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+android/*.iml
+android/app/*.iml
+
+# IDE & Editor files
+.idea/
+.vscode/
+
+# Environment
+.env
+
+# Temporary files
+uploads/
+Thumbs.db
+Desktop.ini
+.DS_Store
+

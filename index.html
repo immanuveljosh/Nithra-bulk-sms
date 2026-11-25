@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulk SMS</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366F1'><path d='M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z'/></svg>" />
+</head>
+<body>
+  <script>
+    if (window.location.protocol === 'file:' || /Android/i.test(navigator.userAgent)) {
+      document.body.classList.add('native-android');
+    }
+  </script>
+
+  <!-- Top Showcase Navigation Bar -->
+  <header class="app-header">
+    <div class="logo-badge">
+      <div class="logo-icon">SMS</div>
+      <div class="brand-text">
+        <h1>Bulk SMS</h1>
+        <p>Contact Import & Campaign System Design</p>
+      </div>
+    </div>
+
+    <!-- Presentation Controls -->
+    <div class="header-controls">
+      <!-- View Mode Buttons -->
+      <button id="btn-view-single" class="view-toggle-btn active" title="Interactive Single Device Simulator">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <span>Interactive Device</span>
+      </button>
+
+      <button id="btn-view-showcase" class="view-toggle-btn" title="Multi-Screen Gallery like Reference Image">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span>All Screens Grid</span>
+      </button>
+
+      <!-- Theme Switcher -->
+      <button id="btn-toggle-theme" class="theme-toggle-btn" title="Toggle Light / Dark Mode">
+        <span id="theme-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Screen Jump Navigation -->
+  <nav class="quick-nav-bar">
+    <button class="nav-pill active" data-screen="contacts">
+      <span>👥 Contacts Screen</span>
+      <span class="badge">Updated</span>
+    </button>
+    <button class="nav-pill" data-screen="excel-import">
+      <span>📊 Excel Import Flow</span>
+      <span class="badge">New</span>
+    </button>
+    <button class="nav-pill" data-screen="phone-import">
+      <span>📱 Phone Contacts Import</span>
+      <span class="badge">New</span>
+    </button>
+    <button class="nav-pill" data-screen="create-campaign">
+      <span>🚀 Campaign Recipient Selection</span>
+      <span class="badge">Updated</span>
+    </button>
+    <button class="nav-pill" data-screen="bulk-sending">
+      <span>📤 Bulk Sending & Review</span>
+    </button>
+    <button class="nav-pill" data-screen="home">
+      <span>🏠 Home Dashboard</span>
+    </button>
+  </nav>
+
+  <!-- Main Workspace / Mobile Emulator Canvas -->
+  <main class="workspace-container" id="main-workspace">
+    <!-- Populated dynamically by app.js -->
+  </main>
+
+  <!-- Load XLSX parser & Interactive Logic -->
+  <script src="xlsx.full.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
